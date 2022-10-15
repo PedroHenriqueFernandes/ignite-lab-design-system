@@ -23,12 +23,12 @@ export default {
 } as Meta;
 
 export const Default: StoryObj = {
-    play: async ({canvasElement}) => { 
+    play: async ({ canvasElement }) => {
         const canvas = within(canvasElement)
 
-        userEvent.type(canvas.getByPlaceholderText('Digite seu e-mail'), 'pedro@harpiacode.com')
-        userEvent.type(canvas.getByPlaceholderText('********'), '12345678')
-        
+        userEvent.type(canvas.getByPlaceholderText('Digite seu e-mail'), 'pedro@harpiacode.com');
+        userEvent.type(canvas.getByPlaceholderText('******'), '123456')
+
         userEvent.click(canvas.getByRole('button'))
 
         await waitFor(() => {
